@@ -1,6 +1,6 @@
 # simplephpcrud
-Simple Php Crud 
-A php program of code to Create, Read, Update and Delete function with Bootstrap 4 <br>
+Simple Php Crud is
+a php program of coding to Create, Read, Update and Delete function with Bootstrap 4 <br>
 Including this: CRUD function with database and Session 
 
 Instruction to use:
