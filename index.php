@@ -18,7 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
   <body>
-    <?php require_once 'process.php'; ?>
+    <?php require_once 'process.php'; ?> <!-- Syntax to include php file -->
 
     <?php if (isset($_SESSION['message'])): ?>
     
@@ -34,7 +34,6 @@
     <?php
         $mysqli = new mysqli('localhost', 'root', '', 'php_crud') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
-        //pre_r($result);
     ?>
 
     <div class="row justify-content-center">
@@ -61,7 +60,7 @@
       </table>    
     </div>
     <div class="row justify-content-center">
-      <form action="process.php" method="POST">
+      <form action="process.php" method="POST"> <!-- Include php file to process data -->
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <div class="form-group">
         <label>Name</label>
