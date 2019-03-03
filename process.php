@@ -3,7 +3,7 @@
 session_start();
 
 //Connection syntax to database
-$mysqli =  new mysqli('localhost', 'root', '', 'php_crud') or die(mysqli_error($mysqli)); 
+$mysqli = new mysqli('localhost', 'root', '', 'php_crud') or die(mysqli_error($mysqli));
 
 //initialize variable default 
 $id = 0;
