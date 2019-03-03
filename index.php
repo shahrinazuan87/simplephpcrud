@@ -22,17 +22,22 @@
 
     <?php if (isset($_SESSION['message'])): ?>
     
-    <div class="alert alert-<?=$_SESSION['msg_type']?>">
+    <div id="alert" class="alert alert-<?=$_SESSION['msg_type']?>">
 
         <?php  
           echo $_SESSION['message'];
           unset($_SESSION['message']);
         ?>
-    </div>
+        <script>
+            setTimeout(function() {
+                $('#alert').alert('close')
+            }, 1000)
+        </script>
+</div>
 <?php endif; ?>  
   <div class="container">
     <?php
-        $mysqli = new mysqli('localhost', 'root', '', 'php_crud') or die(mysqli_error($mysqli));
+        //$mysqli = new mysqli('localhost', 'root', '', 'php_crud') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
     ?>
 
